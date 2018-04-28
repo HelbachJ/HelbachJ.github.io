@@ -17,6 +17,8 @@ are two eyes staring at you made up of ellipses and the background is changing i
 is a "?" button that randomizes the two plus one more so if you click it you might get one of the two,
 of the secret thrid one that is the death star with randomized moving stars.
 
+https://github.com/HelbachJ/MAGD150/blob/gh-pages/Assignment%205
+
 # Assignment 6
 This at first has a single ball just slowly wandering around bouncing off the walls, but in the background
 slowly starts to fade to a different color as time goes on.  Also if you click the mouse at all it enters "freak out" 
