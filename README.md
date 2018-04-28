@@ -24,6 +24,8 @@ This at first has a single ball just slowly wandering around bouncing off the wa
 slowly starts to fade to a different color as time goes on.  Also if you click the mouse at all it enters "freak out" 
 mode which has a bucnch of balls on the screen appearing in random directions.
 
+https://github.com/HelbachJ/MAGD150/blob/gh-pages/Assignment%206
+
 # Assignment 7
 This program creates a bonfire using multiple ellipses and a background for the fire to look like it is in the wilderness.
 The moon is rotated and the trees are randomly made using several ellipses.
