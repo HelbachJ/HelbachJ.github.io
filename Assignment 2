@@ -1,0 +1,131 @@
+void setup() {
+  size(800,600);
+}
+
+void draw(){
+  background(126,192,255);
+//House
+stroke(0,0,0);
+strokeWeight(1);
+fill(#A56511);
+quad(10,300, 10, 500,80, 500,80, 300 );
+
+fill(#A5080B);
+quad(60,330, 60, 500,75, 500,75, 330 );
+
+strokeWeight(2);
+stroke(#EDDA05);
+point(72, 345);
+
+stroke(1);
+fill(0,0,0,170);
+quad(25,310, 25, 330,50, 330,50, 310 );
+noFill();
+line(37,310,37,330);
+line(25, 320, 50, 320); 
+
+fill(#A5080B);
+triangle(0,300,45,260,90,300);
+
+//Grass
+stroke(#399F33);
+strokeWeight(250);
+noFill();
+bezier(0,489,185,459,660,559,800,520);
+
+//Balloons
+
+fill(200,25,10);
+noStroke();
+beginShape();
+vertex(235, 250);
+vertex(278,202);
+vertex(235, 159);
+vertex(192, 202);
+endShape(CLOSE);
+noStroke();
+arc(235,160,120,120,HALF_PI+QUARTER_PI, HALF_PI+HALF_PI+PI+QUARTER_PI);
+
+stroke(255);
+strokeWeight(1);
+noFill();
+bezier(235,250,250,260,245,270,290,300);
+
+
+fill(160,50,200);
+noStroke();
+beginShape();
+vertex(700, 72);
+vertex(689, 60);
+vertex(700, 49);
+vertex(711, 60);
+endShape(CLOSE);
+noStroke();
+arc(700,50,30,30,HALF_PI+QUARTER_PI, HALF_PI+HALF_PI+PI+QUARTER_PI);
+
+stroke(255);
+strokeWeight(1);
+noFill();
+bezier(700,72,702,74,700,78,707,79);
+
+
+fill(200,100,180);
+noStroke();
+beginShape();
+vertex(640, 360);
+vertex(610,327);
+vertex(640, 299);
+vertex(669, 328);
+endShape(CLOSE);
+noStroke();
+arc(640,300,80,80,HALF_PI+QUARTER_PI, HALF_PI+HALF_PI+PI+QUARTER_PI);
+
+
+stroke(255);
+strokeWeight(1);
+noFill();
+bezier(640,360,647,364,660,361,670,374);
+
+colorMode(RGB);
+fill(255,255,255);
+strokeWeight(10);
+noFill();
+arc(235,140,100,60,HALF_PI+HALF_PI, HALF_PI+HALF_PI+QUARTER_PI);
+
+colorMode(RGB);
+fill(255,255,255);
+strokeWeight(10);
+noFill();
+arc(640,286,50,30,HALF_PI+HALF_PI, HALF_PI+HALF_PI+QUARTER_PI);
+
+colorMode(RGB);
+fill(255,255,255);
+strokeWeight(3);
+noFill();
+arc(690,50,5,10,HALF_PI+HALF_PI, HALF_PI+HALF_PI+QUARTER_PI);
+
+//Moon
+colorMode(HSB);
+stroke(0, 0, 255,65);
+strokeWeight(100);
+point(450,130);
+colorMode(RGB);
+stroke(126,192,255);
+strokeWeight(120);
+point(470,110);
+
+//Sun
+colorMode(RGB);
+stroke(240,251,255,100);
+strokeWeight(250);
+arc(0, 2, 3,3, 0, QUARTER_PI);
+
+stroke(245,251,255,100);
+strokeWeight(180);
+arc(0, 2, 3,3, 0, QUARTER_PI);
+
+stroke(255,251,255, 100);
+strokeWeight(80);
+arc(0, 2, 3,3, 0, QUARTER_PI);
+
+}
