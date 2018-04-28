@@ -1,0 +1,253 @@
+int rX, rY;      // Position of square button
+int qX, qY;   // Position of randomize button
+int cX, cY;  // Position of circle button
+int qSize = 20;
+int rSize = 100;
+int cSize = 103;
+color rColor, cColor, qColor;
+color rHighlight, cHighlight, qHighlight;
+color currColor;
+boolean rButtonOver = false;
+boolean cButtonOver = false;
+boolean qButtonOver = false;
+boolean toggle;
+boolean toggle1;
+boolean toggle2;
+float r = random(0, 800);
+float t = random(0,600);
+int choice;
+void setup(){
+  size(800,600);
+  rColor = color(2,200,100);
+  rHighlight = color(51);
+  cColor = color(255,20,10);
+  cHighlight = color(51);
+  qColor = color(200,55,255);
+  qHighlight = color(91);
+  qX = 20;
+  qY = 20;
+  cX = 600;
+  cY = 300;
+  rX = 200;
+  rY = 250;
+  ellipseMode(CENTER);
+  choice = int(random(0,2));
+  println("Right click the mouse to go back to menus");
+  println("The purple button is a randomizer between the two buttons plus one additional secret"); 
+  println("P.S. Secret may be hard to obtain");
+  noStroke();
+  
+  
+}
+
+void draw(){
+  
+  update(mouseX,mouseY);
+  
+  background(15);
+
+  if(rButtonOver){
+    fill(cHighlight);
+  }else{
+    fill(rColor);
+  }
+  stroke(255);
+  rect(rX,rY,rSize,rSize);
+  
+  if(cButtonOver){
+    fill(cHighlight);
+  }else{
+    fill(cColor);
+  }
+  stroke(0);
+  ellipse(cX,cY,cSize,cSize);
+  
+  if(qButtonOver){
+    fill(qHighlight);
+  }else{
+    fill(qColor);
+  }
+  stroke(255);
+  rect(qX,qY,qSize,qSize);
+  
+  fill(255);
+  textSize(20);
+  text("?", qX+7,qY+17);
+  
+  
+  
+  textSize(16);
+  text("Hell?!", cX-20,cY);
+  fill(255);
+  
+  textSize(16);
+  text("Mystery", rX+25,rY+40);
+  fill(0);
+   
+   if (toggle1) { 
+    background(random(0,255),0,0);
+    ellipse(cX,cY,200,100);
+     strokeWeight(80);
+    fill(0);
+    point(cX-20,cY);
+    fill(255);
+    
+    fill(0);
+    strokeWeight(1);
+    ellipse(cX-400,cY,200,100);
+    
+    strokeWeight(80);
+    point(cX-380,cY);
+    fill(255);   
+    }
+    strokeWeight(1);
+  if (toggle) {
+    background(random(0,100));
+    for(int x = 1; x<100; x++){
+      noFill();
+      ellipse(width/2, height/2, (x *20), (x*20));
+      stroke(random(0,255));
+      
+    }
+  }
+  if (toggle2) {
+      if(choice == 0){
+       background(15);
+      //Stars
+       noFill();
+       stroke(255);
+       strokeWeight(2);
+       for (int w = 1; w<100; w++){
+         point (int(random(0,800)), int(random(0,600)));
+       }
+       //Large Star
+       stroke(58);
+       strokeWeight(260);
+       ellipse(40, 40, 40, 40);
+       
+       stroke(64);
+       strokeWeight(300);
+       ellipse(40, 40, 10, 10);
+       
+       stroke(230);
+       strokeWeight(270);
+       point(40, 40);
+       
+       //Medium Star
+       stroke(230);
+       strokeWeight(40);
+       point(220,100);
+       
+       stroke(180);
+       strokeWeight(40);
+       ellipse(220, 100, 3, 3);
+      }
+      else if(choice == 1){
+       background(random(0,255),0,0);
+       
+       ellipse(cX,cY,200,100);
+       strokeWeight(80);
+       fill(0);
+       point(cX-20,cY);
+       fill(255);
+        
+       fill(0);
+       strokeWeight(1);
+       ellipse(cX-400,cY,200,100);
+        
+       strokeWeight(80);
+       point(cX-380,cY);
+       fill(255);   
+       }
+    strokeWeight(1);
+  if (toggle) {
+    background(random(0,100));
+    for(int x = 1; x<100; x++){
+      noFill();
+      ellipse(width/2, height/2, (x *20), (x*20));
+      stroke(random(0,255));
+      
+    }
+      }
+      else if(choice == 2){
+        background(random(0,100));
+        for(int x = 1; x<100; x++){
+           noFill();
+            ellipse(width/2, height/2, (x *20), (x*20));
+            stroke(random(0,255));
+      
+        }
+      }
+      
+   if(mouseButton == RIGHT){
+       choice = int(random(0,2));
+   }
+   strokeWeight(1);
+   
+  }
+}
+
+
+
+void update(int x, int y){
+  if ( cButtonOver(cX, cY, cSize) ) {
+    cButtonOver = true;
+    rButtonOver = false;
+    qButtonOver = false;
+  } else if ( rButtonOver(rX, rY, rSize, rSize) ) {
+    rButtonOver = true;
+    cButtonOver = false;
+    qButtonOver = false;
+  } else if ( qButtonOver(qX, qY, qSize, qSize) ) {
+    qButtonOver = true;
+    cButtonOver = false;
+    rButtonOver = false;
+  } else {
+    cButtonOver = rButtonOver = qButtonOver = false;
+  }
+}
+
+void mousePressed(){
+  if(rButtonOver){
+    toggle = !toggle;
+  }
+  if(cButtonOver){
+    toggle1 = !toggle1;
+  }
+  if(qButtonOver){
+    toggle2 = !toggle2;
+  }
+  if (mouseButton == RIGHT){
+    toggle = false;
+    toggle1 = false;
+    toggle2 = false;
+  }
+}
+
+boolean rButtonOver(int x, int y, int width, int height)  {
+  if (mouseX >= x && mouseX <= x+width && 
+      mouseY >= y && mouseY <= y+height) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+boolean qButtonOver(int x, int y, int width, int height)  {
+  if (mouseX >= x && mouseX <= x+width && 
+      mouseY >= y && mouseY <= y+height) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+boolean cButtonOver(int x, int y, int diameter) {
+  float disX = x - mouseX;
+  float disY = y - mouseY;
+  if (sqrt(sq(disX) + sq(disY)) < diameter/2 ) {
+    return true;
+  } else {
+    return false;
+  }
+}
