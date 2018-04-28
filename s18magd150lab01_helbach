@@ -1,0 +1,402 @@
+void setup() {
+   size(800,600);
+}
+
+void draw() {
+ background(15);
+
+// Death Star Base Figure
+ noFill();
+ stroke(100);
+ //strokeWeight(255);
+ strokeWeight(500);
+ point(510,290);
+ //ellipse(500,290,270,270);
+ 
+ noFill();
+ stroke(15);
+ strokeWeight(2);
+ line(261, 310, 759, 310);
+ 
+ noFill();
+ strokeWeight(170);
+ stroke(120);
+ point(460,210);
+
+ noFill();
+ stroke(0);
+ ellipse(460,210, 2, 2);
+
+ stroke(40);
+ strokeWeight(50);
+ ellipse(455, 205, 2,2);
+ 
+ stroke(40);
+ strokeWeight(150);
+ ellipse(460, 210, 1,1);
+ 
+ stroke(110);
+ strokeWeight(50);
+ point(455, 205);
+ 
+ stroke(0);
+ strokeWeight(1);
+ point(455, 205);
+ 
+ stroke(20);
+ strokeWeight(1);
+ line(455,178,455,135);
+ 
+ stroke(20);
+ strokeWeight(1);
+ line(455,230,455,284);
+ 
+ stroke(20);
+ strokeWeight(1);
+ line(477,219,524,249);
+ 
+ stroke(20);
+ strokeWeight(1);
+ line(478,193,524,170);
+ 
+ stroke(20);
+ strokeWeight(1);
+ line(431,195,392,178);
+ 
+ stroke(20);
+ strokeWeight(1);
+ line(436,223,397,250);
+ 
+ //Top Half of Death Star
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(680, 242, 10, 70);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(730, 242, 20, 70);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(620, 242, 20, 70);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(610, 242, 20, 70);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(540, 242,15,70);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(397, 242,40,70);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(340,242,1,70);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(287, 242,15,70);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(312,162,20,20);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(380,162,30,20);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(540,162,30,20);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(622,162,50,20);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(702,162,30,20);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(430,56,4,5);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(474,56,4,6);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(513,56,8,6);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(550,56,2,6);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(583,56,2, 6);
+ 
+ //Middle Circle Layer
+ noFill();
+ strokeWeight(170);
+ stroke(120);
+ point(460,210);
+
+ noFill();
+ stroke(0);
+ ellipse(460,210, 2, 2);
+
+ stroke(40);
+ strokeWeight(50);
+ ellipse(455, 205, 2,2);
+ 
+ stroke(40);
+ strokeWeight(150);
+ ellipse(460, 210, 1,1);
+ 
+ stroke(110);
+ strokeWeight(50);
+ point(455, 205);
+ 
+ stroke(0);
+ strokeWeight(1);
+ point(455, 205);
+ 
+ stroke(20);
+ strokeWeight(1);
+ line(455,178,455,135);
+ 
+ stroke(20);
+ strokeWeight(1);
+ line(455,230,455,284);
+ 
+ stroke(20);
+ strokeWeight(1);
+ line(477,219,524,249);
+ 
+ stroke(20);
+ strokeWeight(1);
+ line(478,193,524,170);
+ 
+ stroke(20);
+ strokeWeight(1);
+ line(431,195,392,178);
+ 
+ stroke(20);
+ strokeWeight(1);
+ line(436,223,397,250);
+ 
+ //Bottom Half of Death Star
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(650, 376, 20, 70);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(360, 376, 13, 70);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(500, 376, 1, 70);
+ 
+ noFill();
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(550, 376, 3, 70);
+ 
+ noFill();
+ //stroke(80);
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(460, 376, 3, 70);
+ 
+ noFill();
+ //stroke(80);
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(300, 376, 0, 70);
+ 
+ noFill();
+ //stroke(80);
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(720, 376, 17, 70);
+ 
+  noFill();
+ //stroke(80);
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(602, 376, 3, 66);
+ 
+  noFill();
+ //stroke(80);
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(420, 376, 0, 70);
+
+ noFill();
+ //stroke(80);
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(664, 455, 40, 20);
+ 
+  noFill();
+ //stroke(80);
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(393, 455, 1, 20);
+ 
+  noFill();
+ //stroke(80);
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(585, 455, 30, 20);
+ 
+  noFill();
+ //stroke(80);
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(450, 455, 30, 20);
+ 
+   noFill();
+ //stroke(80);
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(510, 455, 10, 20);
+ 
+  noFill();
+ //stroke(80);
+ stroke(90);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(346, 455, 20, 20);
+ 
+  noFill();
+ //stroke(80);
+ stroke(84);
+ strokeWeight(30);
+ rectMode(CENTER);
+ rect(510, 540, 50, 3);
+ 
+ noFill();
+ stroke(15);
+ strokeWeight(520);
+ ellipse(510,290,20,20);
+ 
+//Stars
+ noFill();
+ stroke(255);
+ strokeWeight(2);
+ point(100, 200);
+ point(200, 500);
+ point(20, 450);
+ point(450, 540);
+ point(20, 100);
+ point(130, 320);
+ point(113, 500);
+ point(40, 550);
+ point(760, 529);
+ point(80, 400);
+ point(130, 450);
+ point(243, 169);
+ point(178, 512);
+ point(11, 290);
+ point(231, 200);
+ point(330, 542);
+ point(78, 321);
+ point(140, 587);
+ point(179, 564);
+ point(230, 424);
+ point(260, 500);
+ point(250, 20);
+ point(270, 40);
+ point(330, 92);
+ point(720, 39);
+ point(760, 94);
+ point(731, 140);
+ point(689, 585);
+ point(600, 550);
+ point(223, 350);
+ point(187, 286);
+ point(112, 251);
+ 
+ //Large Star
+ stroke(58);
+ strokeWeight(260);
+ ellipse(40, 40, 40, 40);
+ 
+ stroke(64);
+ strokeWeight(300);
+ ellipse(40, 40, 10, 10);
+ 
+ stroke(230);
+ strokeWeight(270);
+ point(40, 40);
+ 
+ //Medium Star
+ stroke(230);
+ strokeWeight(40);
+ point(220,100);
+ 
+ stroke(180);
+ strokeWeight(40);
+ ellipse(220, 100, 3, 3);
+ 
+}
