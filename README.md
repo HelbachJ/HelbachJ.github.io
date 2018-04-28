@@ -30,3 +30,5 @@ https://github.com/HelbachJ/MAGD150/blob/gh-pages/Assignment%206
 This program creates a bonfire using multiple ellipses and a background for the fire to look like it is in the wilderness.
 The moon is rotated and the trees are randomly made using several ellipses.
 
+https://github.com/HelbachJ/MAGD150/blob/gh-pages/Assignment%207
+
