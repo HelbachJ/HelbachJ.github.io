@@ -1,0 +1,133 @@
+//Bouncy Shape Class
+
+class BouncyShape{
+  
+  float x, y, dx,dy, xRS,yRS;
+  color fill;
+  float size;
+  ArrayList<BouncyShape> shape = new ArrayList<BouncyShape>();
+  
+  BouncyShape(){
+    
+      this((random(53, width - 53)),(random(53, height - 53)),(random(8, 44)));
+  }
+  
+  //Constructor
+  BouncyShape(float _x, float _y, float _size){
+    
+    x = _x;
+    y = _y;
+    size = _size;
+    
+    xRS = random(2, size/20.0);
+    yRS = random(2, size/ 20.0);
+    
+    //Helps with determining direction of the bounce depending on the angle of collision
+    float theta = random(TWO_PI);
+    dx = cos(theta);
+    dy = sin(theta);
+    
+    //Randomizes the color of the BouncyShapes
+     fill = color(random(50, 250), 
+      random(60, 100),100);
+    
+  }
+  
+ 
+  
+  void draw(){
+    int w = 0;
+    int r = 1000;
+    int g = 2000;
+    int b = 2000;
+    int a = 1000;
+    int rSpeed = int(random(-2,-1));
+    
+    collide(rSpeed);
+    colorChange( r,g, b, a);
+    freakOut(w);
+    
+    pushStyle();
+    ellipseMode(RADIUS);
+    
+    fill(fill);
+    ellipse(x,y,size,size);
+    
+   
+  }
+  //Has the BouncyShape reverse it's speed once it collides with a wall
+  void collide(int rSpeed){
+    rSpeed = int(random(-2,-1));//Has it randomize its reversed speed
+    x += xRS * dx; 
+    y += yRS * dy;
+    
+    //This determines what the boundries of the area is and makes it so when it hits
+    //  the sides it will bounce the opposite way
+    if(x - size<0 || x + size > width){
+      dx *= rSpeed;
+      int i = 0;
+      i++;
+      freakOut(i);
+    }
+    //This determines what the boundries of the area is and makes it so when it hits
+    //  the top or botton it will bounce back down or up
+    if (y - size<0 || y + size > height){
+      dy *= rSpeed;
+      int j = 0; 
+      j++;
+      freakOut(j);
+    }
+  }
+  //This function has the color gradualy change as time goes on using millis()
+  void colorChange(float r, float g, float b, float a){
+      r = millis()/1000;
+      g = millis()/2000;
+      b = millis()/2000;
+      a = millis()/1000;
+      
+      background(r,g,b,random(a));
+   
+ }
+  
+ // Randomly place a bunch of bouncy objects all over the place when the mouse is pressed
+ // For when you are bored of watching a slow BouncyShape
+  void freakOut(int amount){
+    if (mousePressed){
+      bs = new BouncyShape[more];
+     for(amount = 0; amount < more; amount++) {
+        bs[amount] = new BouncyShape(); 
+       
+    }
+  
+  }
+  }
+}
+
+////////////////////////////////////////////////////////////////////
+
+//Main
+
+BouncyShape[] bs;
+int more;
+
+
+void setup(){
+ size(800,600); 
+ //Controls the max amount of BouncyObjects on the screen
+ more = max(width, height) / 10;
+ bs = new BouncyShape[more];
+ for(int i = 0; i < more; i++) {
+  bs[i] = new BouncyShape();
+ }
+ 
+ println("Press and hold the mouse to enter Freak Out Mode");
+ }
+void draw(){
+  fill(0,0,100,100);
+  rect(0,0,width,height);
+  //Draws the bouncy object
+ for(int i = 0; i < more; i++) {
+    bs[i].draw();
+ }
+  
+}
