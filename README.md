@@ -2,6 +2,7 @@
 This assingnment creates a circle the base layout of the death star as 
 well a variety of rectancgles to represent the texture of the death star.  Within this 
 Assignment there are also white points that represents stars and multiple ellipses representing a sun.
+https://github.com/HelbachJ/MAGD150/blob/gh-pages/Assignment%201
 
 # Assignment 2
 This assignment creates a peaceful green background along with trhee ballons and a sun.  The grass is made up of a bezier curve and is fill in.  The balloons are made up of an arc and lines to make the balloon shape, and a bezier curve for the string.
